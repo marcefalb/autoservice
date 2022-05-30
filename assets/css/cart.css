@@ -1,0 +1,134 @@
+.cart {
+  padding-top: 92px;
+}
+.cart__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.cart_top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cart__title {
+  font-size: 60px;
+}
+.cart__back-link {
+  margin-top: 24px;
+}
+.cart__category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  margin-top: 48px;
+}
+.cart__category-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cart__service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cart__category-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.cart__service-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  height: 144px;
+
+  padding: 24px;
+
+  background-color: var(--light);
+  border-radius: var(--b-rad);
+}
+.cart__item_left {
+  height: 100%;
+  width: 90%;
+}
+.cart__item-title {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.cart__item_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  height: 100%;
+}
+.cart__item-cost {
+  font-size: 20px;
+  font-weight: 600;
+}
+.cart__item-cart {
+  padding: 12px 24px;
+  width: 72px;
+  height: 48px;
+}
+.cart__item-cart img {
+  height: 24px;
+  width: 24px;
+}
+.order {
+  margin-top: 96px;
+  padding-bottom: 96px;
+}
+.order__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.order__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid var(--light);
+}
+.order_left,
+.order_right {
+  font-size: 40px;
+  font-weight: 700;
+}
+.order__form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  max-width: 552px;
+}
+.order__title {
+  font-size: 18px;
+}
+.order__textfields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ordered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  margin: 200px auto 370px auto;
+}
+.ordered__icon {
+  width: 240px;
+  height: 240px;
+}
+.ordered__title {
+  font-size: 60px;
+}

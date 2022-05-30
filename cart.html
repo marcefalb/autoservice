@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Автосервис японских машин</title>
+
+  <link rel='stylesheet' href='./assets/css/normalize.css'>
+  <link rel='stylesheet' href='./assets/css/index.css'>
+  <link rel='stylesheet' href='./assets/css/cart.css'>
+  <link rel='shortcut icon' href='./assets/icons/general/ic_favicon.svg' type='image/x-icon'>
+</head>
+<body>
+  <header class='header'>
+    <div class='wrapper header__wrapper'>
+      <a href='./index.html' class='header__logo'>
+        <img src='./assets/icons/general/ic_logo.svg' alt='Logo'>
+      </a>
+  
+      <nav class='header__nav'>
+        <ul class='header__nav-list'>
+          <li class='header__nav-item'>
+            <a href='./index.html'>Главная</a>
+          </li>
+          <li class='header__nav-item'>
+            <a href='./services.html'>Услуги</a>
+          </li>
+          <li class='header__nav-item'>
+            <a href='./contacts.html'>Контакты</a>
+          </li>
+          <li class='header__nav-item'>
+            <a href='#'>Корзина</a>
+          </li>
+        </ul>
+      </nav>
+  
+      <a href='./index.html#feedback' class='button header__call'>Заказать звонок</a>
+    </div>
+  </header>
+
+  <main>
+    <section class='cart'>
+      <div class='wrapper cart__wrapper'>
+        <div class='cart_top'>
+          <h1 class='cart__title'>Корзина</h1>
+          <a href='./services.html' class='link cart__back-link'>Вернуться к услугам</a>
+        </div>
+
+        <ul class='cart__category-list'>
+          <li class='cart__category-item'>
+            <span class='cart__category-title'>Ремонт ходовой части</span>
+
+            <ul class='cart__service-list'>
+              <li class='cart__service-item'>
+                <div class='cart__item_left'>
+                  <p class='cart__item-title'>Диагностика ходовой части</p>
+                </div>
+                <div class='cart__item_right'>
+                  <span class='cart__item-cost'>600 р.</span>
+                  <button class='button button_active cart__item-cart'>
+                    <img src="./assets/icons/list/ic_cart-active.svg" />
+                  </button>
+                </div>
+              </li>
+              <li class='cart__service-item'>
+                <div class='cart__item_left'>
+                  <p class='cart__item-title'>Диагностика ходовой части</p>
+                </div>
+                <div class='cart__item_right'>
+                  <span class='cart__item-cost'>600 р.</span>
+                  <button class='button button_active cart__item-cart'>
+                    <img src="./assets/icons/list/ic_cart-active.svg" />
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li class='cart__category-item'>
+            <span class='cart__category-title'>Ремонт ходовой части</span>
+
+            <ul class='cart__service-list'>
+              <li class='cart__service-item'>
+                <div class='cart__item_left'>
+                  <p class='cart__item-title'>Диагностика ходовой части</p>
+                </div>
+                <div class='cart__item_right'>
+                  <span class='cart__item-cost'>600 р.</span>
+                  <button class='button button_active cart__item-cart'>
+                    <img src="./assets/icons/list/ic_cart-active.svg" />
+                  </button>
+                </div>
+              </li>
+              <li class='cart__service-item'>
+                <div class='cart__item_left'>
+                  <p class='cart__item-title'>Диагностика ходовой части</p>
+                </div>
+                <div class='cart__item_right'>
+                  <span class='cart__item-cost'>600 р.</span>
+                  <button class='button button_active cart__item-cart'>
+                    <img src="./assets/icons/list/ic_cart-active.svg" />
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class='order'>
+      <div class='wrapper order__wrapper'>
+        <header class='order__header'>
+          <span class='order_left'>Итого:</span>
+          <span class='order_right'>3650 Р</span>
+        </header>
+
+        <form class='order__form'>
+          <span class='order__title'>Заполните все данные</span>
+
+          <div class='order__textfields'>
+            <input type="text" placeholder='Имя' class='input'>
+            <input type="text" placeholder='Номер телефона' class='input'>
+            <input type="text" placeholder='Электронная почта' class='input'>
+          </div>
+
+          <button class='button'>Оформить заказ</button>
+        </form>
+      </div>
+    </section>
+
+    <section class='ordered'>
+      <img src="./assets/icons/form/ic_ordered.svg" class='ordered__icon' />
+      <span class='ordered__title'>Спасибо за заказ</span>
+      <a href="./services.html" class='link ordered__link'>Вернуться к услугам</a>
+    </section>
+  </main>
+
+  <footer class='footer'>
+    <section class='footer_top'>
+      <div class='footer__img'>
+        <img src='./assets/images/general/img_leftside-bg.png' alt='questions-bg'>
+      </div>
+      <form class='footer__form'>
+        <h3 class='footer__form-title'>Остались вопросы?</h3>
+        <span class='footer__form-subtitle'>Мы с удовольствием на них ответим!</span>
+        
+        <div class='footer__form-textfields'>
+          <input type='text' placeholder='Имя'>
+          <input type='text' placeholder='Номер телефона'>
+        </div>
+
+        <button class='button footer__form-btn'>Отправить</button>
+      </form>
+    </section>
+
+    <section class='footer_bottom'>
+      <div class='wrapper footer__wrapper'>
+        <div class='footer_left'>
+          <nav class='footer__nav'>
+            <div class='footer__nav_left'>
+              <a  class='footer__nav-title' href='./index.html'>Главная</a>
+    
+              <ul class='footer__nav-list'>
+                <li class='footer__nav-item'>
+                  <a href='./services.html'>Услуги</a>
+                </li>
+                <li class='footer__nav-item'>
+                  <a href='./index.html#cooperation'>С кем сотрудничаем</a>
+                </li>
+                <li class='footer__nav-item'>
+                  <a href='./index.html#feedback'>Обратная связь</a>
+                </li>
+                <li class='footer__nav-item'>
+                  <a href='./contacts.html'>Контакты</a>
+                </li>
+              </ul>
+            </div>
+    
+            <div class='footer__nav_right'>
+              <span class='footer__nav-title'>Контакты</span>
+    
+              <ul class='footer__nav-list'>
+                <li class='footer__nav-item'>
+                  <a href='tel:+7 (904) 321 88 12'>+7 (904) 321 88 12</a>
+                </li>
+                <li class='footer__nav-item'>
+                  <a href='tel:+7 (910) 803 45 34'>+7 (910) 803 45 34</a>
+                </li>
+                <li class='footer__nav-item'>
+                  <a href='mailto:ironhorse69@autoservice.ru'>ironhorse69@autoservice.ru</a>
+                </li>
+                <li class='footer__nav-item footer__nav-address'>
+                  <img src='./assets/icons/general/ic_address.svg' alt=''>
+                  <p>г. Тверь, ул. Смольная, д. 45а</p>
+                </li>
+              </ul>
+            </div>
+          </nav>
+  
+          <p class='footer__copyrights'>Copyright © IronHorse 2022. All rights reserved.</p>
+        </div>
+        <div class='footer_right'>
+          <a href='./index.html' class='footer__logo'>
+            <img src='./assets/icons/general/ic_logo-alt.svg' alt='Logo'>
+          </a>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src='./assets/js/general.js'></script>
+</body>
+</html>
