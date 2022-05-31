@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Обратная связь</title>
+
+  <link rel='stylesheet' href='./assets/css/normalize.css'>
+  <link rel='stylesheet' href='./assets/css/index.css'>
+  <link rel='stylesheet' href='./assets/css/admin.css'>
+  <link rel='shortcut icon' href='./assets/icons/general/ic_favicon.svg' type='image/x-icon'>
+</head>
+<body class='admin'>
+  <aside class='sidebar'>
+    <img src="./assets/icons/general/ic_logo.svg" class='sidebar__logo' />
+
+    <nav class='sidebar__nav'>
+      <ul class='sidebar__nav-list'>
+        <li class='sidebar__nav-item'>
+          <a href="./admin.services.html">Услуги</a>
+        </li>
+        <li class='sidebar__nav-item'>
+          <a href="./admin.orders.html">Заказы</a>
+        </li>
+        <li class='sidebar__nav-item sidebar__nav-item_active'>
+          <a href="./admin.feedbacks.html">Обратная связь</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main class='admin__main'>
+    <div class='admin__wrapper'>
+      <div class='admin_top'>
+        <h1 class='admin__title'>Обратная связь</h1>
+        <button class='button button_active'>Добавить</button>
+      </div>
+      <ul class='admin__list'>
+        <li class='admin__item'>
+          <div class='admin__item_left'>
+            <span class='admin__item-muted'>24 услуги</span>
+            <div class='admin__item-info'>
+              <p>Алексей</p>
+              <p>+7 915 706 42 82</p>
+            </div>
+          </div>
+          <div class='admin__item_right'>
+            <button class='button button_active admin-button'>
+              <img src="./assets/icons/admin/ic_trash.svg" />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

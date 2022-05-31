@@ -1,0 +1,31 @@
+.authorization__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 472px;
+  width: 100%;
+
+  margin: 164px auto auto auto;
+}
+.authorization__logo {
+  width: 100px;
+  height: 50px;
+}
+.authorization__title {
+  margin-top: 24px;
+  font-size: 60px;
+}
+.authorization__textfields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 100%;
+
+  margin-top: 48px;
+}
+.authorization__login {
+  margin-top: 24px;
+  width: 100%;
+  text-align: center;
+}
