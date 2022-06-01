@@ -35,32 +35,33 @@
         </ul>
       </nav>
   
-      <a href='./index.html#feedback' class='button header__call'>Заказать звонок</a>
+      <button class='button header__call'>Заказать звонок</button>
     </div>
   </header>
 
-  <main>
+  <main class='main'>
     <section class='price'>
       <div class="wrapper price__wrapper">
         <div class='price_top'>
-          <h1 class='price__title'>Ремонт ходовой части</h1>
+          <h1 class='price__title'>Название</h1>
           <a href="./services.html" class='link price__back-link'>Вернуться к услугам</a>
-          <p class='price__description'>При увеличении тормозного пути, сильном раскачивании кузова на неровных участках дорожных покрытий, ситуациях, когда очень заносит задний или передний мост во время поворотов, с высокой долей вероятности требуется ремонт подвески авто, который осуществляется после профессиональной диагностики. Наш ТехЦентр IRON HORSE предлагает заказать услуги и воспользоваться помощью специалистов.</p>
+          <p class='price__description'>Описание</p>
         </div>
         
         <ul class='price__list'>
-          <li class='price__item'>
-            <div class='price__item_left'>
-              <p class='price__item-title'>Диагностика ходовой части</p>
-            </div>
-            <div class='price__item_right'>
-              <span class='price__item-cost'>От 600 р.</span>
-              <button class='button price__item-cart'>
-                <img src="./assets/icons/list/ic_cart.svg" />
-              </button>
-            </div>
-          </li>
+
         </ul>
+      </div>
+    </section>
+
+    <section class='cart'>
+      <div class='cart_top'>
+        <span>Товаров в корзине:</span>
+        <span class='cart__count'>0</span>
+      </div>
+      <div class='cart_bottom'>
+        <span>На сумму:</span>
+        <span class='cart__sum'>0 руб.</span>
       </div>
     </section>
   </main>
@@ -68,9 +69,9 @@
   <footer class='footer'>
     <section class='footer_top'>
       <div class='footer__img'>
-        <img src='./assets/images/general/img_leftside-bg.png' alt='questions-bg'>
+        <img src='./assets/images/general/img_leftside-bg.png' alt='questions-bg' width='950' height='684'>
       </div>
-      <form class='footer__form'>
+      <form class="footer__form" id='feedback'>
         <h3 class='footer__form-title'>Остались вопросы?</h3>
         <span class='footer__form-subtitle'>Мы с удовольствием на них ответим!</span>
         
@@ -138,6 +139,7 @@
     </section>
   </footer>
 
-  <script src='./assets/js/general.js'></script>
+  <script src='./assets/js/services.js'></script>
+  <script src='./assets/js/index.js'></script>
 </body>
 </html>

@@ -28,8 +28,11 @@
 .services__item_top {
   width: 100%;
   height: 225px;
+  overflow: hidden;
 }
 .services__item_top img {
+  width: 100%;
+  height: auto;
   border-top-left-radius: var(--b-rad);
   border-top-right-radius: var(--b-rad);
 }
