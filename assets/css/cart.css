@@ -80,6 +80,11 @@
   height: 24px;
   width: 24px;
 }
+.cart__plug {
+  color: var(--grey);
+  font-size: 24px;
+  font-weight: 600;
+}
 .order {
   margin-top: 96px;
   padding-bottom: 96px;

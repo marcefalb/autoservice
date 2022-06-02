@@ -5,6 +5,8 @@ require '../../database/db.php';
 $_POST = json_decode(file_get_contents('php://input'), true);
 $ids = str_replace(array('[', ']', ' '), '', $_POST['services']);
 
+if (!isset($services)) exit(json_encode(404));
+
 $services = R::getAll( "SELECT * FROM services WHERE id IN ($ids) ORDER BY category_id" );
 $categories = R::getAll( "SELECT DISTINCT id, name FROM categories ORDER BY id" );
 $uniqCategories = [];
@@ -24,6 +26,8 @@ foreach($categories as $category) {
       array_push($categoryService, $service);
     }
   }
+  if (count($categoryService) === 0) continue;
+
   $category = [
     'id' => intval($category['id']),
     'name' => $category['name'],
@@ -39,5 +43,6 @@ foreach($categories as $category) {
 $response = array(
   'categories' => $uniqCategories,
 );
+
 
 echo json_encode($response);

@@ -10,7 +10,7 @@ const serviceItem = (service) => `
       <p class='price__item-title'>${service.name}</p>
     </div>
     <div class='price__item_right'>
-      <span class='price__item-cost'>От ${service.price} р.</span>
+      <span class='price__item-cost'>От ${service.price} ₽</span>
       <button class='button price__item-cart' data-service-id='${service.id}' data-service-price='${service.price}'>
         <img src="./assets/icons/list/ic_cart.svg" />
       </button>
@@ -87,7 +87,7 @@ const updateCart = (count, sum) => {
   const sumHtml = document.querySelector('.cart__sum');
 
   countHtml.innerText = count;
-  sumHtml.innerText = sum;
+  sumHtml.innerText = sum + ' ₽';
 };
 updateCart(localStorageCount, localStorageSum);
 

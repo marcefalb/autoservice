@@ -55,13 +55,16 @@ main {
 }
 .input {
   width: 100%;
-
+  
   padding: 14px 24px 15px 24px;
   
   background-color: var(--light);
   border-radius: var(--b-rad);
-
+  
   font-size: 16px;
+}
+.input:focus::placeholder {
+  color: #8B8C8D;
 }
 .input_unvalid {
   outline: 1px solid var(--unvalid);

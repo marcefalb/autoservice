@@ -49,5 +49,7 @@ sendFeedbackBtn.addEventListener('click', (e) => {
     })
     
     parentContainer.innerHTML = feedbackFormSendedHTML;
+
+    inputs.forEach(input => input.value = '');
   }
 })
