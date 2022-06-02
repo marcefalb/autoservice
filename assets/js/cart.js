@@ -1,5 +1,25 @@
-const categoriesListNode = document.querySelector('.cart__category-list');
+var orderPhoneMask = IMask(
+  document.getElementById('order-phone'), {
+    mask: '+{7} (000) 000-00-00'
+  });
 
+var orderEmailMask = IMask(
+  document.getElementById('order-email'), {
+    mask: 'left@middle.right',
+    blocks: {
+      'left': {
+        mask: /[a-z0-9_\.-]+/
+      },
+      'middle': {
+        mask: /[a-z0-9-]+/,
+      },
+      'right': {
+        mask: /[a-z]{2,4}/,
+      },
+    }
+  });
+
+const categoriesListNode = document.querySelector('.cart__category-list');
 const localStorageSum = parseInt(localStorage.getItem('sum')) || 0;
 
 const categoryItemHtml = (category, servicesListHtml) => `

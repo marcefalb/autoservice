@@ -5,7 +5,7 @@ require '../../database/db.php';
 $_POST = json_decode(file_get_contents('php://input'), true);
 $ids = str_replace(array('[', ']', ' '), '', $_POST['services']);
 
-if (!isset($services)) exit(json_encode(404));
+if (!isset($ids)) exit(json_encode(404));
 
 $services = R::getAll( "SELECT * FROM services WHERE id IN ($ids) ORDER BY category_id" );
 $categories = R::getAll( "SELECT DISTINCT id, name FROM categories ORDER BY id" );

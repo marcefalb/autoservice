@@ -10,6 +10,13 @@ callBtn.addEventListener('click', () => {
   })
 })
 
+// Маска на телефон
+
+var phoneMask = IMask(
+  document.getElementById('phone-mask'), {
+    mask: '+{7} (000) 000-00-00'
+  });
+
 // Кнопка "Отправить" в футере
 
 const sendFeedbackBtn = document.querySelector('.footer__form-btn');

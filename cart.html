@@ -64,8 +64,8 @@
 
           <div class='order__textfields'>
             <input type="text" placeholder='Имя' class='input'>
-            <input type="text" placeholder='Номер телефона' class='input'>
-            <input type="text" placeholder='Электронная почта' class='input'>
+            <input type="text" placeholder='Номер телефона' class='input' id='order-phone'>
+            <input type="text" placeholder='Электронная почта' class='input' id='order-email'>
           </div>
 
           <button class='order__button button'>Оформить заказ</button>
@@ -85,7 +85,7 @@
         
         <div class='footer__form-textfields'>
           <input type='text' placeholder='Имя' class='input'>
-          <input type='text' placeholder='Номер телефона' class='input'>
+          <input type='text' placeholder='Номер телефона' class='input' id='phone-mask'>
         </div>
 
         <button class='button footer__form-btn'>Отправить</button>
@@ -147,6 +147,7 @@
     </section>
   </footer>
 
+  <script src="https://unpkg.com/imask"></script>
   <script src='./assets/js/cart.js'></script>
   <script src='./assets/js/index.js'></script>
 </body>
