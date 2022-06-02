@@ -1,4 +1,18 @@
 const categoriesList = document.querySelector('.services__list');
+
+const localStorageSum = parseInt(localStorage.getItem('sum')) || 0;
+const localStorageCount = parseInt(localStorage.getItem('count')) || 0;
+
+const updateCart = (count, sum) => {
+  const countHtml = document.querySelector('.cart__count');
+  const sumHtml = document.querySelector('.cart__sum');
+
+  countHtml.innerText = count;
+  sumHtml.innerText = sum + ' ₽';
+};
+updateCart(localStorageCount, localStorageSum);
+
+
 const categoryHTML = (category) => `
   <li class='services__item'>
     <div class='services__item_top'>

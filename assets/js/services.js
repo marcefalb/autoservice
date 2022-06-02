@@ -97,6 +97,21 @@ const setServicesItems = async (services) => {
   );
 };
 
+const checkCartBtns = () => {
+  const toCartBtns = document.querySelectorAll('.price__item-cart');
+  let servicesIds = JSON.parse(localStorage.getItem('services')) || [];
+
+  toCartBtns.forEach(btn => {
+    servicesIds.forEach(serviceId => {
+      if (serviceId === parseInt(btn.getAttribute('data-service-id'))) {
+        toggleCartBtn(btn);
+        console.log(btn);
+        return;
+      }
+    })
+  })
+}
+
 fetch(`../../php/api/Index/IndexServices.php?service=${params.get('service')}`)
   .then((res) => res.json())
   .then((res) => {
@@ -108,4 +123,5 @@ fetch(`../../php/api/Index/IndexServices.php?service=${params.get('service')}`)
     setServicesItems(services);
 
     setToCartListener();
+    checkCartBtns();
   });
