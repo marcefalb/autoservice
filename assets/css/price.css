@@ -38,6 +38,8 @@
 .price {
   padding: 92px 0;
   margin-left: 288px;
+  width: 100%;
+  max-width: 1110px;
 }
 .price__wrapper {
   display: flex;

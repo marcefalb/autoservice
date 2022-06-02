@@ -40,7 +40,7 @@ const updateLocalStorage = (id, sum) => {
   let storageCount = parseInt(localStorage.getItem('count')) || 0;
 
   servicesIds.forEach((serviceId) => {
-    if (serviceId === id) {
+    if (parseInt(serviceId) === id) {
       hasId = true;
       return;
     }
@@ -49,7 +49,7 @@ const updateLocalStorage = (id, sum) => {
   if (hasId) {
     storageSum -= sum;
     storageCount -= 1;
-    servicesIds = servicesIds.filter((serviceId) => serviceId !== id);
+    servicesIds = servicesIds.filter((serviceId) => parseInt(serviceId) !== id);
   } else {
     storageSum += sum;
     storageCount += 1;
@@ -70,7 +70,7 @@ const setToCartListener = () => {
   toCartBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       updateLocalStorage(
-        btn.getAttribute('data-service-id'),
+        parseInt(btn.getAttribute('data-service-id')),
         parseInt(btn.getAttribute('data-service-price'))
         );
       toggleCartBtn(btn)
