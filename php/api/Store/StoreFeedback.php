@@ -8,6 +8,7 @@ $feedback = R::dispense( 'feedback' );
 
 $feedback -> name = $_POST['feedback']['name'];
 $feedback -> phone = $_POST['feedback']['phone'];
+$order -> date = date('Y-m-d');
 
 $newFeedback = R::store($feedback);
 

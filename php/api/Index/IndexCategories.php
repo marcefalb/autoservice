@@ -2,7 +2,12 @@
 
 require '../../database/db.php';
 
-$categories = R::getAll( 'SELECT * FROM categories' );
+$categories = R::getAll( 
+  '
+  SELECT categories.id AS id, categories.name AS name, (SELECT count(*) FROM services WHERE services.category_id = categories.id) AS services_count
+  FROM categories
+  ' 
+);
 
 $response = array(
   'categories' => $categories,

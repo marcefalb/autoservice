@@ -32,21 +32,31 @@
   <main class='admin__main'>
     <div class='admin__wrapper'>
       <div class='admin_top'>
-        <h1 class='admin__title'>Редактирование</h1>
+        <h1 class='admin__title'>Добавление</h1>
         <a href="./admin.services.html" class='link'>Назад</a>
       </div>
       
       <div class='edit'>
+        <div class='edit__img-edit'>
+          <div class='edit__img-container'>
+            <img src="#" alt="Картинка отсутствует...">
+          </div>
+          <input type="file" class='edit__img-upload' id='edit-img'>
+          <label for="edit-img" class='link'>Загрузить</label>
+        </div>
+
         <div class='edit__textfields'>
           <input type="text" class='input' placeholder='Название'>
         </div>
 
         <div class='edit__btns'>
-          <button class='button'>Сохранить</button>
+          <button class='button button-save'>Сохранить</button>
           <button class='button button_active'>Удалить</button>
         </div>
       </div>
     </div>
   </main>
+
+  <script src="./assets/js/admin.service-edit.js"></script>
 </body>
 </html>
