@@ -1,5 +1,10 @@
 const params = new URLSearchParams(window.location.search);
 
+const id = params.get('id');
+const addBtn = document.querySelector('.admin__add');
+
+addBtn.href = `./admin.price-edit.html?category_id=${id}`;
+
 const serviceItem = service => `
   <li class='admin__item'>
     <div class='admin__item_left'>
@@ -22,7 +27,7 @@ const setTitle = title => {
   titleNode.innerText = title;
 }
 
-fetch(`../../php/api/Index/IndexServices.php?service=${params.get('id')}`)
+fetch(`../../php/api/Index/IndexServices.php?service=${id}`)
   .then((res) => res.json())
   .then((res) => {
     const servicesList = document.querySelector('.admin__list');

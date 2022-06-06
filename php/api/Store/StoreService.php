@@ -6,12 +6,13 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 
 $service = R::dispense( 'services' );
 
-$service -> title = $_POST['category']['title'];
-$service -> price = $_POST['category']['price'];
+$service -> name = $_POST['name'];
+$service -> price = $_POST['price'];
+$service -> category_id = $_POST['category_id'];
 
-$newPrice = R::store($service);
+$newService = R::store($service);
 
-if ($newPrice) {
+if ($newService) {
   $response = array(
     'status' => 200
   );
