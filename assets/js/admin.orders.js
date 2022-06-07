@@ -114,7 +114,6 @@ fetch(`../../php/api/Index/IndexOrders.php`)
   .then((res) => res.json())
   .then((res) => {
     if (res.orders !== undefined) {
-      console.log(res.orders);
       ordersListNode.innerHTML = setOrdersListHtml(res.orders);
       setToTrashListener();
     }

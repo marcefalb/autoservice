@@ -105,7 +105,6 @@ const checkCartBtns = () => {
     servicesIds.forEach(serviceId => {
       if (serviceId === parseInt(btn.getAttribute('data-service-id'))) {
         toggleCartBtn(btn);
-        console.log(btn);
         return;
       }
     })

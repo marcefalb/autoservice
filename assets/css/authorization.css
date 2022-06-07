@@ -23,9 +23,19 @@
   width: 100%;
 
   margin-top: 48px;
+  margin-bottom: 16px;
+}
+.auth-validation {
+  display: none;
+  text-align: center;
+  color: red;
+  opacity: .6;
+}
+.auth-validation_active {
+  display: block;
 }
 .authorization__login {
-  margin-top: 24px;
+  margin-top: 8px;
   width: 100%;
   text-align: center;
 }
