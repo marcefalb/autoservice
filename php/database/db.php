@@ -3,7 +3,7 @@
 require '../../libs/rb.php';
 
 $host = 'localhost';
-$dbname = 'autoservices';
+$dbname = 'autoservice';
 $login = 'root';
 $password = 'root';
 

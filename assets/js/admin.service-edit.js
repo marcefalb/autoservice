@@ -30,7 +30,7 @@ const setSaveBtnListener = actionType => {
         input.addEventListener('change', () => input.classList.remove(activeClass));
       }
     });
-    if (!btnUploadImg.files[0]) {
+    if (!btnUploadImg.files[0] && !img.src.toString().includes('.png')) {
       document.querySelector('.edit__img-edit .link').style.color = 'red';
       validation = false;
     }

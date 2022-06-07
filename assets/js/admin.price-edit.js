@@ -7,6 +7,11 @@ const categoriesSelect = document.querySelector('.edit__textfields select')
 const backLink = document.querySelector('.link');
 let categoryId = null;
 
+var numberMask = IMask(
+  priceInput, {
+    mask: Number,
+  });
+
 const selectHtml = (category, id) => `
   <option value='${category.id}' ${id === category.id ? 'selected' : ''}>${category.name}</option>
 `

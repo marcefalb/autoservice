@@ -4,11 +4,11 @@ require '../../database/db.php';
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
-$feedback = R::dispense( 'feedback' );
+$feedback = R::dispense( 'feedbacks' );
 
-$feedback -> name = $_POST['feedback']['name'];
-$feedback -> phone = $_POST['feedback']['phone'];
-$order -> date = date('Y-m-d');
+$feedback -> name = $_POST['name'];
+$feedback -> phone = $_POST['phone'];
+$feedback -> date = date('Y-m-d');
 
 $newFeedback = R::store($feedback);
 

@@ -21,7 +21,7 @@ var phoneMask = IMask(
 
 const sendFeedbackBtn = document.querySelector('.footer__form-btn');
 const feedbackFormSendedHTML = `
-  <div class='footer__form_sended>
+  <div class='footer__form_sended'>
     <span>Спасибо</span>
     <p>Наши специалисты свяжутся с вами в скором времени!</p>
   </div>
@@ -54,9 +54,10 @@ sendFeedbackBtn.addEventListener('click', (e) => {
         phone: feedbackPhone.value,
       })
     })
+      .then(() => {
+        parentContainer.innerHTML = feedbackFormSendedHTML;
+        inputs.forEach(input => input.value = '');
+      })
     
-    parentContainer.innerHTML = feedbackFormSendedHTML;
-
-    inputs.forEach(input => input.value = '');
   }
 })
