@@ -187,8 +187,12 @@
   height: 100%;
 }
 .edit__img-container img {
+  max-width: 350px;
+  max-height: 225px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  
+  object-fit: cover;
 
   color: var(--grey);
   border-radius: var(--b-rad);
@@ -200,4 +204,29 @@
 }
 .link {
   cursor: pointer;
+}
+.textarea {
+  max-width: 470px;
+  min-width: 470px;
+  max-height: 250px;
+  min-height: 250px;
+  
+  padding: 14px 24px 15px 24px;
+  
+  background-color: var(--light);
+  border-radius: var(--b-rad);
+  
+  font-size: 16px;
+}
+.textarea:focus::placeholder {
+  color: #8B8C8D;
+}
+.textarea_unvalid::placeholder {
+  color: var(--unvalid);
+}
+.textarea:focus {
+  outline: 1px solid var(--dark);
+}
+.textarea_active {
+  outline: 1px solid #939496;
 }
