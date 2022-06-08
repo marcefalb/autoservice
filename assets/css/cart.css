@@ -138,3 +138,18 @@
 .ordered__title {
   font-size: 60px;
 }
+.ordered__employee-title {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+.ordered__employee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.ordered__employee-item {
+  font-size: 24px;
+  font-weight: bold;
+}

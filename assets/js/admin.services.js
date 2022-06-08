@@ -3,7 +3,7 @@ const categoriesList = document.querySelector('.admin__list');
 const categoryHTML = category => `
   <li class='admin__item'>
     <a class='admin__item_left admin__item-link' href='./admin.price.html?id=${category.id}'>
-      <span class='admin__item-muted'>Количество услуг: ${category.services_count}</span>
+      <span class='admin__item-muted'>Ответственный сотрудник: ${category.employerName}, количество услуг: ${category.services_count}</span>
       <div class='admin__item-info'>
         <p>${category.name}</p>
       </div>

@@ -15,6 +15,7 @@ foreach($orders as $order) {
   $ids = str_replace(array('[', ']', ' '), '', $order['services']);
   $services = R::getAll( "SELECT * FROM services WHERE id IN ($ids) ORDER BY category_id" );
   $categories = R::getAll( "SELECT DISTINCT id, name FROM categories ORDER BY id" );
+  $employee = R::getAll( "SELECT DISTINCT name, position, rank FROM employee WHERE employee.id IN (SELECT employer_id FROM categories JOIN services on categories.id = services.category_id WHERE services.id IN ($ids))" );
 
   foreach($categories as $category) {
     $categoryServices = [];
@@ -49,6 +50,7 @@ foreach($orders as $order) {
     'date' => $order['date'],
     'sum' => $sum,
     'categories' => $orderServices,
+    'employee' => $employee,
   ];
 
   array_push($ordersList, $orderInfo);

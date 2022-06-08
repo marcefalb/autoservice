@@ -44,5 +44,4 @@ $response = array(
   'categories' => $uniqCategories,
 );
 
-
 echo json_encode($response);

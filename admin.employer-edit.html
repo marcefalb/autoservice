@@ -18,7 +18,7 @@
 
     <nav class='sidebar__nav'>
       <ul class='sidebar__nav-list'>
-        <li class='sidebar__nav-item sidebar__nav-item_active'>
+        <li class='sidebar__nav-item'>
           <a href="./admin.services.html">Услуги</a>
         </li>
         <li class='sidebar__nav-item'>
@@ -27,7 +27,7 @@
         <li class='sidebar__nav-item'>
           <a href="./admin.feedbacks.html">Обратная связь</a>
         </li>
-        <li class='sidebar__nav-item'>
+        <li class='sidebar__nav-item sidebar__nav-item_active'>
           <a href="./admin.employee.html">Сотрудники</a>
         </li>
         <li class='sidebar__nav-item sidebar__nav-item_bottom'>
@@ -43,14 +43,14 @@
     <div class='admin__wrapper'>
       <div class='admin_top'>
         <h1 class='admin__title'>Добавление</h1>
-        <a href="./admin.price.html" class='link'>Назад</a>
+        <a href="./admin.employee.html" class='link'>Назад</a>
       </div>
       
       <div class='edit'>
         <div class='edit__textfields'>
-          <select type="text" class='input' placeholder='Категория'>
-          <input type="text" class='input' placeholder='Название'>
-          <input type="text" class='input' placeholder='Цена'>
+          <input type="text" class='input' placeholder='Имя сотрудника'>
+          <input type="text" class='input' placeholder='Должность'>
+          <input type="text" class='input' placeholder='Разряд'>
         </div>
 
         <div class='edit__btns'>
@@ -61,7 +61,6 @@
     </div>
   </main>
   
-  <script src="https://unpkg.com/imask"></script>
-  <script src="./assets/js/admin.price-edit.js"></script>
+  <script src="./assets/js/admin.employer-edit.js"></script>
 </body>
 </html>

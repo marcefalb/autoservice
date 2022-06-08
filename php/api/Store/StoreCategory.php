@@ -19,6 +19,7 @@ $content = file_get_contents($_FILES['image']['tmp_name']);
 file_put_contents("../../../assets/images/services/{$imageName}", $content);
 $category -> name = $_POST['name'];
 $category -> description = $_POST['description'];
+$category -> employer_id = $_POST['employer_id'];
 if (isset($content)) $category -> img = $imageName;
 
 $newCategory = R::store($category);

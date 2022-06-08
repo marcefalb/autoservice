@@ -6,11 +6,27 @@ const nameInput = document.querySelector('.edit__textfields input');
 const descTextarea = document.querySelector('.edit__textfields textarea');
 const newImg = document.querySelector('.edit__img-upload');
 const img = document.querySelector('.edit__img-container img');
+const employeeSelect = document.querySelector('.edit__textfields select')
 const [saveBtn, deleteBtn] = document.querySelectorAll('.edit__btns button');
+
+const selectHtml = (employer, id) => `
+  <option value='${employer.id}' ${id === employer.id ? 'selected' : ''}>${employer.name}</option>
+`
+
+const setSelectValues = (id) => {
+  fetch('../../php/api/Index/IndexEmployee.php')
+    .then(res => res.json())
+    .then(res => {
+      res.employee.forEach(employer => {
+        employeeSelect.innerHTML += selectHtml(employer, id);
+      })
+    })
+}
 
 const setCategoryData = category => {
   const title = document.querySelector('.admin__title');
 
+  setSelectValues(category.employer_id);
   nameInput.value = category.name;
   descTextarea.value = category.description;
   img.src = `./assets/images/services/${category.img}`;
@@ -48,6 +64,7 @@ const setSaveBtnListener = actionType => {
       formData.append('id', id);
       formData.append('name', nameInput.value);
       formData.append('description', descTextarea.value);
+      formData.append('employer_id', employeeSelect.value)
 
       fetch(path, {
         method: 'POST',
@@ -97,6 +114,7 @@ if (id) {
     });
   }
   else {
+    setSelectValues();
     setSaveBtnListener('add');
     deleteBtn.remove();
 }

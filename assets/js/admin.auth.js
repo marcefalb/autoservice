@@ -23,7 +23,6 @@ fetch('../../php/api/Auth/CheckAuth.php')
   .then(res => {
     if (!res.auth) redirect();
     else isAuth = true;
-    console.log(isAuth);
   })
 
 window.addEventListener('load', () => setLogoutListener());

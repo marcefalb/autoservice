@@ -21,7 +21,6 @@ const setServiceData = service => {
 
   categoryId = service.category_id;
 
-  setSelectValues(service.category_id);
   nameInput.value = service.name;
   priceInput.value = service.price;
   title.innerText = 'Редактирование';

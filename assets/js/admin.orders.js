@@ -25,6 +25,10 @@ const orderHtml = (order, formattedDate, categoriesListHtml) => `
         <div class='order__price-line'></div>
         <span class='order__price-value'>${order.sum} ₽</span>
       </li>
+      <li class='order__price-item order__employee'>
+        <p class='order__price-title'>Требуемые сотрудники</p>
+        <span class='order__price-value'>${getEmployeeHtml(order.employee)}</span>
+      </li>
     </ul>
   </li>
 `;
@@ -53,6 +57,17 @@ const setServicesListHtml = services => {
 
   return servicesHtml;
 };
+
+const getEmployeeHtml = employee => {
+  let employeeHtml = '';
+
+  employee.forEach((employer, index) => {
+    if (index === 0) employeeHtml += `${employer.name} - ${employer.position}`
+    else employeeHtml += `, ${employer.name} - ${employer.position}`
+  })
+
+  return employeeHtml;
+}
 
 const setCategoriesListHtml = categories => {
   let categoriesHtml = ``;

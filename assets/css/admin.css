@@ -170,6 +170,14 @@
 .order__sum {
   margin-top: 24px;
 }
+.order__employee {
+  justify-content: space-between;
+}
+.order__employee p,
+.order__employee span {
+  color: var(--grey);
+  font-size: 14px;
+}
 
 .edit {
   display: flex;

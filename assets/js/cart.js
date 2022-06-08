@@ -154,13 +154,25 @@ fetch(`../../php/api/Index/IndexCart.php`,{
 
   
 const orderBtnNode = document.querySelector('.order__button');
-const orderFormSendedHtml = `
+const orderFormSendedHtml = employeeHtml => `
   <section class='ordered'>
     <img src="./assets/icons/form/ic_ordered.svg" class='ordered__icon' />
     <span class='ordered__title'>Спасибо за заказ</span>
+    <p class='ordered__employee-title'>Вам необходимо обратиться к следующим<br/>специалистам для получения обслуживания:</p>
+    <ul class='ordered__employee-list'>${employeeHtml}</ul>
     <a href="./services.html" class='link ordered__link'>Вернуться к услугам</a>
   </section>
 `;
+
+const getEmployeeHtml = (employee) => {
+  let employeeHtml = '';
+
+  employee.forEach(employer => {
+    employeeHtml += `<li class='ordered__employee-item'>${employer.name}, ${employer.position}</li>`
+  })
+
+  return employeeHtml;
+}
 
 orderBtnNode.addEventListener('click', (e) => {
   e.preventDefault();
@@ -192,8 +204,12 @@ orderBtnNode.addEventListener('click', (e) => {
         services,
       })
     })
+      .then(res => res.json())
+      .then(res => {
+        const employeeHtml = getEmployeeHtml(res.employee)
+        parentContainer.innerHTML = orderFormSendedHtml(employeeHtml);
+      })
 
-    parentContainer.innerHTML = orderFormSendedHtml;
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
